@@ -10,7 +10,7 @@ const WeddingContactSection: React.FC = () => {
       {/* Background Wedding Image - Hidden on mobile */}
       <div className="md:block hidden relative">
         <Image
-          src="/media/destination-wedding.68cdefbbf8b32f808bccf0f36ce6a9e8.svg"
+          src="/service-banner.webp"
           alt="WeddingImage"
           width={1200}
           height={675}
