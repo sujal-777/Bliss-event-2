@@ -1,4 +1,6 @@
-import Image from "next/image"
+"use client";
+
+import Image from "next/image";
 
 export default function AboutBlissEvent() {
   return (
@@ -9,42 +11,42 @@ export default function AboutBlissEvent() {
           <div className="relative">
             <div className="relative w-full h-[500px] md:h-[550px]">
               {/* Main wedding couple image */}
-              <div className="absolute right-0 top-[10%] w-[70%] h-[70%] z-20">
+              <div className="absolute right-0 top-[10%] w-[95%] h-[90%] z-20">
                 <div className="relative w-full h-full rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=400&width=350"
+                    src="/About1.png"
                     alt="Wedding couple in traditional attire"
-                    fill
-                    className="object-cover"
+                    layout="fill"
+                    objectFit="cover"
                   />
                 </div>
               </div>
 
-              {/* Bride getting ready image */}
+              {/* Bride getting ready image
               <div className="absolute left-0 bottom-[10%] w-[60%] h-[50%] z-10">
                 <div className="relative w-full h-full rounded-lg overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="/About2.png"
                     alt="Bride getting ready"
-                    fill
-                    className="object-cover"
+                    layout="fill"
+                    objectFit="cover"
                   />
                 </div>
-              </div>
+              </div> */}
 
               {/* Decorative element */}
               <div className="absolute left-[15%] top-[15%] w-[20%] h-[20%] z-0">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/placeholder.svg?height=100&width=100"
+                    src="/about-decrative.svg"
                     alt="Decorative element"
-                    fill
-                    className="object-contain"
+                    layout="fill"
+                    objectFit="contain"
                   />
                 </div>
               </div>
 
-              {/* Experience badge */}
+              {/* Experience badge
               <div className="absolute left-[50%] bottom-[20%] transform -translate-x-1/2 z-30 bg-white rounded-lg border-2 border-red-600 p-3 shadow-lg flex items-center gap-3">
                 <div className="text-red-600">
                   <svg
@@ -66,7 +68,7 @@ export default function AboutBlissEvent() {
                   <div className="font-bold text-red-600 text-xl">10+</div>
                   <div className="text-red-600 font-semibold text-sm">EXPERIENCES</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -134,7 +136,7 @@ export default function AboutBlissEvent() {
                 </div>
                 <div>
                   <div className="font-bold text-gray-800 text-2xl">10+</div>
-                  <div className="text-gray-600 text-sm">Years of Experienced</div>
+                  <div className="text-gray-600 text-sm">Years of Experience</div>
                 </div>
               </div>
 
@@ -158,7 +160,7 @@ export default function AboutBlissEvent() {
                 </div>
                 <div>
                   <div className="font-bold text-gray-800 text-2xl">12K</div>
-                  <div className="text-gray-600 text-sm">Going projects</div>
+                  <div className="text-gray-600 text-sm">Ongoing projects</div>
                 </div>
               </div>
             </div>
@@ -166,6 +168,5 @@ export default function AboutBlissEvent() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-
+import WeddingServiceCards from "@/components/Home/card"
+import AboutBlissEvent from "./about-us/about-bliss-event"
 export default function Home() {
   return (
     <>
@@ -55,6 +56,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         <div
           className="absolute -bottom-16 -right-16 w-64 h-64 bg-contain bg-no-repeat opacity-10"
           style={{ backgroundImage: "url('/media/white-flower.ab2619234b351fccecd270b52fb503c7.svg')" }}
@@ -65,6 +67,10 @@ export default function Home() {
         ></div>
       </section>
 
+
+      <WeddingServiceCards />
+
+      <AboutBlissEvent/>
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
