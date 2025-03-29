@@ -42,7 +42,7 @@ export default function Ourservice() {
             className="bg-[#B40101] flex flex-row justify-between rounded-xl py-6 w-11/12 md:w-auto max-w-[22rem] transition-all duration-1000 ease-linear items-center px-6 relative h-64 mx-auto"
           >
             <div className="flex flex-col items-start w-7/12">
-              <p className="font-serif text-white text-lg">
+              <p className="font-serif text-white text-lg ">
                 {service.title}
               </p>
               <p className="text-left text-sm text-white">

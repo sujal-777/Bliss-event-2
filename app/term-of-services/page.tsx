@@ -1,192 +1,188 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { Check } from "lucide-react"
 
 export default function TermsOfServicePage() {
   return (
     <>
-      <section className="bg-pink-100 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-red-700 mb-4">Terms of Service</h1>
-          <p className="text-gray-700 max-w-2xl mx-auto">Last Updated: March 24, 2024</p>
+      <div className="w-full bg-pink-50 py-16 relative overflow-hidden">
+        <div className="container mx-auto relative z-10 flex justify-center items-center">
+          <h1 className="text-6xl md:text-7xl font-bold text-center text-[#8B0000] font-serif">Terms of Service</h1>
         </div>
-      </section>
+        <br />
+
+        {/* Left leaf decoration */}
+        <div className="absolute left-4 md:left-40 top-1/2 -translate-y-1/2 opacity-70">
+          <Image src="/leaf1.svg" width={80} height={120} alt="Decorative leaf" className="transform -rotate-12" />
+        </div>
+
+        {/* Right leaf decoration */}
+        <div className="absolute right-4 md:right-40 top-1/2 -translate-y-1/2 opacity-70">
+          <Image src="/leaf1.svg" width={80} height={120} alt="Decorative leaf" className="transform rotate-12" />
+        </div>
+
+        {/* Additional subtle decorative elements */}
+        <div className="absolute left-1/4 bottom-8 opacity-30">
+          <Image src="/leaf2.svg" width={40} height={60} alt="" className="transform rotate-45" />
+        </div>
+        <div className="absolute right-1/4 bottom-8 opacity-30">
+          <Image src="/leaf2.svg" width={40} height={60} alt="" className="transform -rotate-45" />
+        </div>
+      </div>
 
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 w-screen max-w-8xl">
           <div className="prose prose-lg max-w-none">
-            <p>
-              Welcome to The Bliss Events. These Terms of Service ("Terms") govern your use of our website and services.
-              Please read these Terms carefully before using our website or engaging our services.
-            </p>
-            <p>
-              By accessing or using our website and services, you agree to be bound by these Terms. If you do not agree
-              to these Terms, please do not use our website or services.
-            </p>
-
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">1. Services</h2>
-            <p>
-              The Bliss Events provides wedding planning and event management services, including but not limited to:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Wedding planning and coordination</li>
-              <li>Venue selection and booking</li>
-              <li>Vendor coordination</li>
-              <li>Decor and design services</li>
-              <li>Photography and videography services</li>
-              <li>Catering services</li>
-              <li>Entertainment services</li>
-              <li>Other related wedding and event services</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">2. Service Agreements</h2>
-            <p>
-              All services provided by The Bliss Events are subject to a separate service agreement that outlines the
-              specific services, deliverables, timelines, and fees. The service agreement will be provided to you after
-              an initial consultation and before any services are rendered.
-            </p>
-            <p>
-              The service agreement, once signed by both parties, constitutes a binding contract between you and The
-              Bliss Events. In the event of any conflict between these Terms and the service agreement, the service
-              agreement shall prevail.
+            {/* Legal Disclaimer */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Legal Disclaimer</h2>
+            <p className="text-gray-800 mb-6">
+              This Legal Disclaimer governs the use of The Bliss Event's website and services. By accessing or using our
+              website and services, you agree to the terms outlined in this disclaimer. The information provided on this
+              website is for general informational purposes only. We strive to ensure the accuracy, timeliness, and
+              completeness of the information provided; however, we make no representations or warranties of any kind,
+              express or implied, about the accuracy, reliability, suitability, or availability concerning the website
+              or the information, products, services, or related graphics contained on the website for any purpose. Any
+              reliance you place on such information is strictly at your own risk.
             </p>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">3. Payments and Fees</h2>
-            <p>
-              Our fees for services are outlined in the service agreement. Unless otherwise specified in the service
-              agreement:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>
-                A non-refundable deposit of 50% of the total fee is required to secure our services and your event date.
-              </li>
-              <li>
-                The remaining balance is due according to the payment schedule specified in the service agreement.
-              </li>
-              <li>
-                Additional services requested after the signing of the service agreement may incur additional fees.
-              </li>
-              <li>Late payments may be subject to a late fee of 2% per month on the outstanding balance.</li>
-            </ul>
-            <p>
-              We accept payments via bank transfer, credit card, and UPI. All fees are exclusive of applicable taxes,
-              which will be added to the final invoice.
+            {/* Credit Reporting Terms of Service */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Credit Reporting Terms of Service</h2>
+            <p className="text-gray-800 mb-6">
+              The Bliss Events specializes in curating memorable and magical weddings for our cherished clients. In
+              order to ensure transparency, trust, and efficient financial transactions, we outline the following Credit
+              Reporting Terms of Service. 1. Credit Reporting Overview: a. Credit Scores: As a wedding planning company,
+              'THE BLISS EVENTS' acknowledges the importance of maintaining a positive credit score. We understand that
+              our creditworthiness can influence our business relationships and financial transactions with vendors. b.
+              Credit Reports: We value accurate credit reporting and regularly monitor our credit reports. This helps us
+              to review and rectify any discrepancies, ensuring the accuracy of our financial history. 'THE BLISS
+              EVENTS' values transparency, integrity, and reliability in all our business dealings. By abiding by these
+              Credit Reporting Terms of Service, we aim to maintain a positive credit standing, foster strong
+              relationships with our vendors, and ensure seamless financial transactions in our pursuit to create
+              unforgettable weddings for our clients.
             </p>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">4. Cancellation and Refund Policy</h2>
-            <p>Our cancellation and refund policy is as follows:</p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>The initial deposit is non-refundable under any circumstances.</li>
-              <li>
-                Cancellations made more than 6 months before the event date: 50% refund of any additional payments made
-                beyond the deposit.
-              </li>
-              <li>
-                Cancellations made 3-6 months before the event date: 25% refund of any additional payments made beyond
-                the deposit.
-              </li>
-              <li>Cancellations made less than 3 months before the event date: No refund.</li>
-              <li>Postponements may be accommodated subject to our availability and may incur additional fees.</li>
-            </ul>
-            <p>All cancellation requests must be submitted in writing to info@theblissevents.in.</p>
-
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">5. Intellectual Property</h2>
-            <p>
-              All content on our website, including text, graphics, logos, images, audio clips, digital downloads, and
-              software, is the property of The Bliss Events or its content suppliers and is protected by Indian and
-              international copyright laws.
-            </p>
-            <p>
-              By engaging our services, you grant us permission to use photographs, videos, and other media from your
-              event for our portfolio, website, social media, and marketing materials, unless otherwise specified in
-              writing.
+            {/* Ownership of Site Agreement to Terms of Use */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Ownership of Site Agreement to Terms of Use</h2>
+            <p className="text-gray-800 mb-6">
+              By accessing and using this website, you acknowledge that you have read, understood, and agreed to comply
+              with the terms outlined in this Ownership of Site Agreement and the Terms of Use. All content, including
+              but not limited to text, images, graphics, logos, audio clips, video clips, and software, displayed or
+              accessible on this Site, is the property of The Bliss Events or its licensors and is protected by
+              copyright, trademark, and other intellectual property laws. If you have any questions or concerns
+              regarding this Ownership of Site Agreement or the Terms of Use, please feel free to contact us at
+              +91-9545717217.
             </p>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">6. Limitation of Liability</h2>
-            <p>
-              To the maximum extent permitted by law, The Bliss Events shall not be liable for any indirect, incidental,
-              special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly
-              or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Your use or inability to use our website or services</li>
-              <li>Any unauthorized access to or use of our servers and/or any personal information stored therein</li>
-              <li>Any interruption or cessation of transmission to or from our website</li>
-              <li>
-                Any bugs, viruses, trojan horses, or the like that may be transmitted to or through our website by any
-                third party
-              </li>
-              <li>
-                Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any
-                content posted, emailed, transmitted, or otherwise made available through our website or services
-              </li>
-            </ul>
-            <p>
-              Our total liability for any claims under these Terms shall not exceed the amount paid by you to The Bliss
-              Events for the services related to the claim.
+            {/* Provision of Services */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Provision of Services</h2>
+            <p className="text-gray-800 mb-4">
+              This Provision of Services Agreement sets forth the terms and conditions under which The Bliss Events
+              agrees to provide services to the client.
             </p>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">7. Indemnification</h2>
-            <p>
-              You agree to defend, indemnify, and hold harmless The Bliss Events, its officers, directors, employees,
-              and agents, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt,
-              and expenses (including but not limited to attorney's fees) arising from:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Your use of and access to our website and services</li>
-              <li>Your violation of any term of these Terms</li>
-              <li>
-                Your violation of any third-party right, including without limitation any copyright, property, or
-                privacy right
-              </li>
-              <li>Any claim that your content caused damage to a third party</li>
-            </ul>
+            <div className="space-y-4 mb-6">
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <p>All taxes including the service tax will be charged extra as applicable.</p>
+              </div>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">8. Governing Law and Jurisdiction</h2>
-            <p>
-              These Terms shall be governed by and construed in accordance with the laws of India. Any dispute arising
-              out of or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts in
-              Nagpur, Maharashtra, India.
-            </p>
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <p>Notice of cancellation must be made in writing to The Bliss Events.</p>
+              </div>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">9. Changes to Terms</h2>
-            <p>
-              We reserve the right to modify these Terms at any time. Any changes will be effective immediately upon
-              posting on our website. Your continued use of our website and services after any such changes constitutes
-              your acceptance of the new Terms.
-            </p>
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <p>
+                  Within 7 days after the advance amount is received, if the event is cancelled by the client, then the
+                  client will be entitled to 50% of the total paid amount, less any supplier cancellation charges.
+                </p>
+              </div>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">10. Severability</h2>
-            <p>
-              If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or
-              eliminated to the minimum extent necessary so that the Terms will otherwise remain in full force and
-              effect and enforceable.
-            </p>
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <p>
+                  Within 15 days after the advance amount is received, if the event is cancelled by the client then the
+                  client will be entitled to 20% of the total paid less any supplier cancellation charges.
+                </p>
+              </div>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">11. Contact Information</h2>
-            <p>If you have any questions about these Terms, please contact us at:</p>
-            <div className="bg-pink-50 p-6 rounded-lg mt-4 mb-6">
-              <p className="mb-2">
-                <strong>The Bliss Events</strong>
-              </p>
-              <p className="mb-2">Email: info@theblissevents.in</p>
-              <p className="mb-2">Phone: +91 70219 27602</p>
-              <p>Address: Nagpur, Maharashtra, India</p>
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <p>
+                  After 15 days, if the event is canceled by the client then, will not be entitled to get back any of
+                  the total paid less any supplier cancellation charges.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <p>
+                  Please note that irrespective of the above-mentioned cancellations slabs, there would be a service
+                  charge of 10% which would be applicable in case of cancellation of services after the booking is made
+                  with us.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <p>
+                  The Bliss Events is not liable for any interruption or disturbance/cancellation in the event/program
+                  due to Natural Disaster/Riots/Fire/Flood/Cyclone/Curfew etc.
+                </p>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <p>
+                  In concern to refund of unused / un-utilized services (which are paid for and canceled in advance) the
+                  refund amount would be calculated on the basis of cancellation policy as explained above and the money
+                  would be accordingly refunded to the person who has made the payment to us. Please note that it may
+                  take 4 – 8 weeks for the refund process due to banking procedures. If the refund is made to the credit
+                  card account or to Bank account, the bank charges would be debited from the refund amount.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-gray-600 mb-6">
-              By using our website and services, you acknowledge that you have read and understood these Terms of
-              Service.
+            {/* Limitation of Liability */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Limitation of Liability</h2>
+            <p className="text-gray-800 mb-6">
+              The Limitation of Liability clause within our agreements at The Bliss Events is a protective measure that
+              defines the extent of our responsibility in case of unforeseen situations. While we strive to deliver
+              exceptional services, this clause outlines that we are not liable for indirect, consequential, or
+              incidental damages arising from the use of our services or website. At The Bliss Events, our commitment
+              remains unwavering in delivering exceptional service, and this clause serves as a framework to ensure a
+              fair and balanced working relationship for both parties involved.
             </p>
-            <div className="flex justify-center space-x-4">
-              <Button variant="outline" className="border-red-700 text-red-700 hover:bg-red-50">
-                <Link href="/privacy-policy">Privacy Policy</Link>
-              </Button>
-              <Button className="bg-red-700 hover:bg-red-800 text-white">
-                <Link href="/contact-us">Contact Us</Link>
-              </Button>
-            </div>
+
+            {/* Accounts, Passwords and Security */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Accounts, Passwords and Security</h2>
+            <p className="text-gray-800 mb-6">
+              Protecting your account at The Bliss Events is paramount. We prioritize security by encouraging users to
+              safeguard their account credentials diligently. Creating robust passwords and keeping them confidential is
+              essential to prevent unauthorized access. We employ industry-standard security measures, yet users should
+              remain vigilant against potential threats. If any suspicious activity is noticed, we urge immediate
+              reporting to our support team. Our commitment to security extends to educating users about phishing risks
+              and ensuring compliance with our security policies. At The Bliss Events, your account's safety is a top
+              priority, and together, we work towards a secure and trusted environment.
+            </p>
           </div>
         </div>
       </section>

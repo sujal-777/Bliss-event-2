@@ -1,172 +1,174 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { Check } from "lucide-react"
 
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <section className="bg-pink-100 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-red-700 mb-4">Privacy Policy</h1>
-          <p className="text-gray-700 max-w-2xl mx-auto">Last Updated: March 24, 2024</p>
+      <div className="w-full bg-pink-50 py-16 relative overflow-hidden">
+        <div className="container mx-auto relative z-10 flex justify-center items-center">
+          <h1 className="text-6xl md:text-7xl font-bold text-center text-[#8B0000] font-serif">Privacy Policy</h1>
         </div>
-      </section>
+        <br />
+
+        {/* Left leaf decoration */}
+        <div className="absolute left-4 md:left-40 top-1/2 -translate-y-1/2 opacity-70">
+          <Image src="/leaf1.svg" width={80} height={120} alt="Decorative leaf" className="transform -rotate-12" />
+        </div>
+
+        {/* Right leaf decoration */}
+        <div className="absolute right-4 md:right-40 top-1/2 -translate-y-1/2 opacity-70">
+          <Image src="/leaf1.svg" width={80} height={120} alt="Decorative leaf" className="transform rotate-12" />
+        </div>
+
+        {/* Additional subtle decorative elements */}
+        <div className="absolute left-1/4 bottom-8 opacity-30">
+          <Image src="/leaf2.svg" width={40} height={60} alt="" className="transform rotate-45" />
+        </div>
+        <div className="absolute right-1/4 bottom-8 opacity-30">
+          <Image src="/leaf2.svg" width={40} height={60} alt="" className="transform -rotate-45" />
+        </div>
+      </div>
 
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 w-screen max-w-8xl ">
           <div className="prose prose-lg max-w-none">
-            <p>
-              At The Bliss Events, we are committed to protecting your privacy and ensuring the security of your
-              personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your
-              information when you visit our website or use our services.
+            {/* Information Collection */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Information Collection</h2>
+            <p className="text-gray-800 mb-4">
+              At Bliss Events, we are committed to safeguarding your privacy. This Privacy Policy outlines how we
+              collect, use, disclose, and protect your personal information. By engaging with our services, you consent
+              to the practices described in this policy.
             </p>
-
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">Information We Collect</h2>
-
-            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Personal Information</h3>
-            <p>We may collect personal information that you voluntarily provide to us when you:</p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Fill out forms on our website</li>
-              <li>Register for an account</li>
-              <li>Subscribe to our newsletter</li>
-              <li>Request information about our services</li>
-              <li>Contact us via email, phone, or other communication channels</li>
-              <li>Participate in surveys or promotions</li>
-            </ul>
-            <p>The personal information we may collect includes:</p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Name</li>
-              <li>Email address</li>
-              <li>Phone number</li>
-              <li>Mailing address</li>
-              <li>Wedding date and details</li>
-              <li>Payment information</li>
-              <li>Any other information you choose to provide</li>
+            <ul className="list-disc pl-6 space-y-2 mb-6">
+              <li>Contact Information: Names, email addresses, phone numbers.</li>
+              <li>Event Details: Wedding date, venue, preferences.</li>
+              <li>Billing Information: Invoicing and payment details.</li>
+              <li>Communication: Correspondence and feedback.</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Automatically Collected Information</h3>
-            <p>
-              When you visit our website, we may automatically collect certain information about your device and usage
-              patterns. This information may include:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>IP address</li>
-              <li>Browser type and version</li>
-              <li>Operating system</li>
-              <li>Device information</li>
-              <li>Pages visited and time spent on those pages</li>
-              <li>Referring website addresses</li>
-              <li>Other usage statistics</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">How We Use Your Information</h2>
-            <p>We may use the information we collect for various purposes, including:</p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Providing, maintaining, and improving our services</li>
-              <li>Processing and completing transactions</li>
-              <li>Sending administrative information, such as confirmations and updates</li>
-              <li>Responding to your inquiries and requests</li>
-              <li>Personalizing your experience on our website</li>
-              <li>Sending marketing and promotional communications (with your consent)</li>
-              <li>Analyzing usage patterns and trends to improve our website and services</li>
-              <li>Protecting against fraudulent or unauthorized transactions</li>
-              <li>Complying with legal obligations</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">Disclosure of Your Information</h2>
-            <p>We may share your information in the following situations:</p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>
-                <strong>Service Providers:</strong> We may share your information with third-party vendors, service
-                providers, and contractors who perform services on our behalf.
-              </li>
-              <li>
-                <strong>Business Transfers:</strong> If we are involved in a merger, acquisition, or sale of all or a
-                portion of our assets, your information may be transferred as part of that transaction.
-              </li>
-              <li>
-                <strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in
-                response to valid requests by public authorities.
-              </li>
-              <li>
-                <strong>Protection of Rights:</strong> We may disclose your information to protect our rights, privacy,
-                safety, or property, and that of our customers or others.
-              </li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">Cookies and Tracking Technologies</h2>
-            <p>
-              We use cookies and similar tracking technologies to collect information about your browsing activities and
-              to improve your experience on our website. You can set your browser to refuse all or some browser cookies,
-              or to alert you when cookies are being sent. However, if you disable or refuse cookies, some parts of our
-              website may not function properly.
+            {/* How We Use Cookies */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">How We Use Cookies</h2>
+            <p className="text-gray-800 mb-6">
+              At Bliss Events, we use cookies to enhance your browsing experience and provide personalized services.
+              Cookies are small text files stored on your device that help us analyze website usage, improve
+              functionality, and tailor content to your preferences.
             </p>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">Data Security</h2>
-            <p>
-              We implement appropriate technical and organizational measures to protect the security of your personal
-              information. However, please be aware that no method of transmission over the internet or electronic
-              storage is 100% secure, and we cannot guarantee absolute security.
-            </p>
+            <div className="space-y-6 mb-6">
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-medium">Essential Cookies:</p>
+                  <p>
+                    Necessary for the basic functionality of our website. They enable features such as page navigation
+                    and access to secure areas.
+                  </p>
+                </div>
+              </div>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">Your Privacy Rights</h2>
-            <p>
-              Depending on your location, you may have certain rights regarding your personal information, including:
-            </p>
-            <ul className="list-disc pl-6 mb-4">
-              <li>The right to access your personal information</li>
-              <li>The right to correct inaccurate or incomplete information</li>
-              <li>The right to request deletion of your personal information</li>
-              <li>The right to restrict or object to processing of your personal information</li>
-              <li>The right to data portability</li>
-              <li>The right to withdraw consent</li>
-            </ul>
-            <p>
-              To exercise these rights, please contact us using the information provided in the "Contact Us" section
-              below.
-            </p>
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-medium">Analytical/Performance Cookies:</p>
+                  <p>
+                    Allow us to recognize and count the number of visitors, analyze web traffic, and improve our
+                    website's performance. This data is aggregated and anonymized
+                  </p>
+                </div>
+              </div>
+1
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-medium">Functionality Cookies:</p>
+                  <p>
+                    Enhance your experience by remembering your preferences{" "}
+                    <a href="mailto:customersupport@theblissevents.in" className="text-[#C00000]">
+                      customersupport@theblissevents.in
+                    </a>
+                    . For instance, they may remember your language or region selection.
+                  </p>
+                </div>
+              </div>
 
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">Children's Privacy</h2>
-            <p>
-              Our website and services are not directed to individuals under the age of 18. We do not knowingly collect
-              personal information from children. If you are a parent or guardian and believe that your child has
-              provided us with personal information, please contact us, and we will take steps to delete such
-              information.
-            </p>
-
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">Changes to This Privacy Policy</h2>
-            <p>
-              We may update our Privacy Policy from time to time. Any changes will be posted on this page, and the "Last
-              Updated" date at the top of the policy will be revised accordingly. We encourage you to review this
-              Privacy Policy periodically for any changes.
-            </p>
-
-            <h2 className="text-2xl font-bold text-red-700 mt-8 mb-4">Contact Us</h2>
-            <p>
-              If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact
-              us at:
-            </p>
-            <div className="bg-pink-50 p-6 rounded-lg mt-4 mb-6">
-              <p className="mb-2">
-                <strong>The Bliss Events</strong>
-              </p>
-              <p className="mb-2">Email: info@theblissevents.in</p>
-              <p className="mb-2">Phone: +91 70219 27602</p>
-              <p>Address: Nagpur, Maharashtra, India</p>
+              <div className="flex items-start gap-3">
+                <div className="text-[#C00000] mt-1 flex-shrink-0">
+                  <Check className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-medium">Targeting/Advertising Cookies:</p>
+                  <p>
+                    These cookies may be set through our site by advertising partners. They are used to build a profile
+                    of your interests and show you relevant ads on other sites.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-gray-600 mb-6">
-              By using our website and services, you acknowledge that you have read and understood this Privacy Policy.
+            {/* Information Sharing */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Information Sharing</h2>
+            <p className="text-gray-800 mb-6">
+              We do not sell, trade, or transfer your personal information to third parties. Information may be shared
+              with vendors only for event-related purposes with your consent.
             </p>
-            <div className="flex justify-center space-x-4">
-              <Button variant="outline" className="border-red-700 text-red-700 hover:bg-red-50">
-                <Link href="/term-of-services">Terms of Service</Link>
-              </Button>
-              <Button className="bg-red-700 hover:bg-red-800 text-white">
-                <Link href="/contact-us">Contact Us</Link>
-              </Button>
-            </div>
+
+            {/* Data Protection */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Data Protection</h2>
+            <p className="text-gray-800 mb-4">
+              At Bliss Events, we are dedicated to safeguarding your privacy through our Data Protection Policy. We
+              collect and process only essential personal data required for our wedding management services, ensuring it
+              is handled securely and transparently. Our commitment extends to robust security measures, limited data
+              sharing with explicit consent, and compliance with data protection laws.
+            </p>
+            <p className="text-gray-800 mb-4">
+              You have the right to access, correct, or delete your information, and we retain data only as long as
+              necessary. Our website utilizes cookies for an enhanced browsing experience, with options for managing
+              preferences. We regularly review and update our practices to align with legal requirements, and any
+              concerns or inquiries can be directed to{" "}
+              <a href="mailto:customersupport@theblissevents.in" className="text-[#C00000]">
+                customersupport@theblissevents.in
+              </a>
+              .
+            </p>
+            <p className="text-gray-800 mb-6">
+              By choosing Bliss Events, you entrust us with your data, and we honor that trust by prioritizing your
+              privacy every step of the way.
+            </p>
+
+            {/* Your Rights */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Your Rights</h2>
+            <p className="text-gray-800 mb-4">
+              You have the right to access, correct, or delete your personal data. You can also opt out of promotional
+              communications at any time.
+            </p>
+
+            <ul className="list-disc pl-6 space-y-2 mb-6">
+              <li>You have the right to access your personal data held by Bliss Events upon request.</li>
+              <li>You can request the correction of any inaccuracies in your personal information.</li>
+              <li>You have the right to request the deletion of your personal data when it is no longer needed.</li>
+              <li>Manage your preferences for cookies used on our website through your browser settings.</li>
+              <li>Upon request, receive your personal data in a commonly used and machine-readable format.</li>
+            </ul>
+
+            {/* Changes to the Cookie Policy */}
+            <h2 className="text-3xl font-bold text-[#C00000] mt-8 mb-4">Changes to the Cookie Policy</h2>
+            <p className="text-gray-800 mb-6">
+              We may update our cookie policy to reflect changes in our practices or for legal reasons. Any changes will
+              be posted on this page. If you have any questions or concerns about our use of cookies, please contact us
+              at{" "}
+              <a href="mailto:customersupport@theblissevents.in" className="text-[#C00000]">
+                customersupport@theblissevents.in
+              </a>
+              .
+            </p>
           </div>
         </div>
       </section>
