@@ -3,6 +3,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import WeddingServiceCards from "@/components/Home/card"
 import AboutBlissEvent from "./about-us/about-bliss-event"
+import OurService from "@/components/Home/OurService"
+import WeddingContactSection from "@/components/services/WeddingContactSection"
+
 export default function Home() {
   return (
     <>
@@ -71,129 +74,13 @@ export default function Home() {
       <WeddingServiceCards />
 
       <AboutBlissEvent/>
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-700 mb-2">Our Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We offer a comprehensive range of wedding planning services to make your special day perfect.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Wedding Planning",
-                description: "Comprehensive wedding planning services from start to finish.",
-                image: "/media/weddind-image.ebb016d5ec4203528b35.jpg",
-              },
-              {
-                title: "Decor & Design",
-                description: "Beautiful and elegant decoration for your wedding venue.",
-                image: "/media/popular-blog.e352fca1778f492f1412.png",
-              },
-              {
-                title: "Photography",
-                description: "Capture your special moments with our professional photography.",
-                image: "/media/photography-event.8074d1efdbee21fe7be1.png",
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="bg-pink-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="h-48 overflow-hidden">
-                  <Image
-                    src={service.image || "/media/weddingImge6.f49503e498259a09991e440ed79f3569.svg"}
-                    alt={service.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-red-700 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Link href="/service" className="text-red-700 font-medium hover:text-red-800">
-                    Learn More →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+      <OurService />
+      <br />
+      <br />
+      <WeddingContactSection />
 
-          <div className="text-center mt-10">
-            <Button className="bg-red-700 hover:bg-red-800 text-white">View All Services</Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-pink-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-700 mb-2">Why Choose Us</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We are dedicated to making your wedding day perfect in every way.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Experienced Team",
-                description: "Our team has years of experience in wedding planning.",
-              },
-              {
-                title: "Personalized Service",
-                description: "We tailor our services to match your unique vision.",
-              },
-              {
-                title: "Attention to Detail",
-                description: "We pay attention to every small detail of your wedding.",
-              },
-              {
-                title: "Budget Friendly",
-                description: "We offer packages to suit different budget requirements.",
-              },
-            ].map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-red-700 text-2xl font-bold">{index + 1}</span>
-                </div>
-                <h3 className="text-xl font-bold text-red-700 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-700 mb-2">Our Recent Work</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Take a look at some of our recent wedding celebrations.</p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <div key={item} className="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <Image
-                  src={`/gallery-${item}.svg`}
-                  alt={`Gallery Image ${item}`}
-                  width={300}
-                  height={300}
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Button className="bg-red-700 hover:bg-red-800 text-white">View Gallery</Button>
-          </div>
-        </div>
-      </section>
+  
 
       <section className="py-16 bg-pink-50">
         <div className="container mx-auto px-4">
