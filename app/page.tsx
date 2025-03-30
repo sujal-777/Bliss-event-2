@@ -5,7 +5,10 @@ import WeddingServiceCards from "@/components/Home/card"
 import AboutBlissEvent from "./about-us/about-bliss-event"
 import OurService from "@/components/Home/OurService"
 import WeddingContactSection from "@/components/services/WeddingContactSection"
-
+import WeddingPlanner from "@/components/Home/Dream-Wedding"; 
+import WeddingForm from "@/app/Book-Appointment/page"
+import TeamMembers  from "@/components/Home/Organizer"
+import WeddingCategories from "@/components/Home/Categories"
 export default function Home() {
   return (
     <>
@@ -79,8 +82,13 @@ export default function Home() {
       <br />
       <br />
       <WeddingContactSection />
-
+      <WeddingPlanner />
   
+      <TeamMembers/>
+
+      < WeddingForm/>
+
+      <WeddingCategories/>
 
       <section className="py-16 bg-pink-50">
         <div className="container mx-auto px-4">
